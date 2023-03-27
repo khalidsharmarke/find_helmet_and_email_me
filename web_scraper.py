@@ -7,8 +7,7 @@ from selenium.webdriver.common.by import By
 load_dotenv()
 
 driver = webdriver.Chrome()
-# driver.get(os.getenv("WEBSITE_URL"))
-driver.get("https://lazersport.us/collections/road/products/stradakineticore")
+driver.get(os.getenv("WEBSITE_URL"))
 add_to_cart_button = driver.find_element(By.CLASS_NAME, "btn-addtocart")
 
 if add_to_cart_button.text == "ADD TO CART":
